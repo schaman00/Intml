@@ -1,0 +1,11 @@
+{
+  "slot_attention": {
+    "checkpoint": "Out2/best.pt",
+    "step": 3999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.06427950376272201,
+    "ari_fg": 0.2529225995540619
+  }
+}
