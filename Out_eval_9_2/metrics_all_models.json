@@ -1,0 +1,92 @@
+{
+  "7000_step_model": {
+    "checkpoint": "Out9_2/models/7000_step_model.pt",
+    "step": 6999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.053880104541778565,
+    "ari_fg": 0.3757965106964111
+  },
+  "6000_step_model": {
+    "checkpoint": "Out9_2/models/6000_step_model.pt",
+    "step": 5999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05467932736873627,
+    "ari_fg": 0.36918824768066405
+  },
+  "3000_step_model": {
+    "checkpoint": "Out9_2/models/3000_step_model.pt",
+    "step": 2999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05607095012068748,
+    "ari_fg": 0.2970121302604675
+  },
+  "1000_step_model": {
+    "checkpoint": "Out9_2/models/1000_step_model.pt",
+    "step": 999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.06444708949327468,
+    "ari_fg": 0.2557819483280182
+  },
+  "5000_step_model": {
+    "checkpoint": "Out9_2/models/5000_step_model.pt",
+    "step": 4999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05534765803813934,
+    "ari_fg": 0.41058683276176455
+  },
+  "last": {
+    "checkpoint": "Out9_2/models/last.pt",
+    "step": 8499,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05279406976699829,
+    "ari_fg": 0.4249024865627289
+  },
+  "best": {
+    "checkpoint": "Out9_2/models/best.pt",
+    "step": 8499,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05279451221227646,
+    "ari_fg": 0.4268004581928253
+  },
+  "4000_step_model": {
+    "checkpoint": "Out9_2/models/4000_step_model.pt",
+    "step": 3999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05516316318511963,
+    "ari_fg": 0.28276339745521545
+  },
+  "8000_step_model": {
+    "checkpoint": "Out9_2/models/8000_step_model.pt",
+    "step": 7999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05313326343894005,
+    "ari_fg": 0.38746202635765076
+  },
+  "2000_step_model": {
+    "checkpoint": "Out9_2/models/2000_step_model.pt",
+    "step": 1999,
+    "hid_dim": 64,
+    "num_slots": 6,
+    "val_images": 2000,
+    "mse": 0.05708169335126877,
+    "ari_fg": 0.27805879259109495
+  }
+}

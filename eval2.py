@@ -164,14 +164,11 @@ def training_curves(run_dirs, out_path):
 
 
 def main():
-    # Cartella principale del run
-    run_dir = 'Out8'
+    run_dir = 'Out9_2'
 
-    # Cartella contenente i checkpoint
     checkpoint_dir = os.path.join(run_dir, 'models')
 
-    # Cartella di output della valutazione
-    out_dir = 'Out_eval_8'
+    out_dir = 'Out_eval_9_2'
 
     os.makedirs(out_dir, exist_ok=True)
 
@@ -181,7 +178,6 @@ def main():
 
     print(f'Device: {device}')
 
-    # Dataset di validazione
     val_set = MultiDSprites(
         DEFAULT_NPY_DIR,
         split='val',
@@ -270,7 +266,6 @@ def main():
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
-    # Salva tutte le metriche
     metrics_path = os.path.join(
         out_dir,
         'metrics_all_models.json'
@@ -281,7 +276,6 @@ def main():
 
     print(f'wrote {metrics_path}')
 
-    # Mostra il modello migliore secondo ARI-FG
     best_name, best_result = max(
         metrics.items(),
         key=lambda item: item[1]['ari_fg']

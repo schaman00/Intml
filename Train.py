@@ -55,15 +55,15 @@ def main():
     seed=0
     set_seed(seed)
 
-    out = 'Out8'
+    out = 'Out9_2'
     npy_dir = DEFAULT_NPY_DIR
     os.makedirs(out, exist_ok=True)
 
 
     batch_size=32
-    steps=17000
-    log_every=200
-    ckpt_every=2000
+    steps=8500
+    log_every=100
+    ckpt_every=1000
     num_workers=2
     resolution = (64, 64)
     num_slots = 6
@@ -74,7 +74,7 @@ def main():
     decay_steps=8000
     decay_rate=0.5
     clip_grad = 1
-    base_lr = 4e-4
+    base_lr = 1e-4
     
     resume = None
     no_amp = False
