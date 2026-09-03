@@ -21,9 +21,9 @@ def lr_at(step, base_lr, warmup_steps, decay_rate, decay_steps):
 
 
 def mask_diagnostics(masks):
-    p = masks.detach().squeeze(-1).float()                       # [B, K, H, W]
+    p = masks.detach().squeeze(-1).float()                       
     entropy = -(p * (p + 1e-8).log()).sum(dim=1).mean()
-    winner = p.argmax(dim=1)                            # [B, H, W]
+    winner = p.argmax(dim=1)                          
     k = p.shape[1]
     frac = torch.stack([(winner == i).float().mean() for i in range(k)])
     slots_used = int((frac >= 0.01).sum())

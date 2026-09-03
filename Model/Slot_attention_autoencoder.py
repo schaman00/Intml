@@ -29,16 +29,16 @@ class SlotAttentionAutoEncoder(nn.Module):
             hidden_dim=slot_mlp_dim)
 
     def forward(self, image):
-        x = self.encoder_cnn(image)          # [B, H*W, hid]
+        x = self.encoder_cnn(image)   
         x = self.norm(x)
         x = self.fc2(F.relu(self.fc1(x)))
 
-        slots, attn = self.slot_attention(x)  # [B, K, hid], [B, K, H*W]
+        slots, attn = self.slot_attention(x)  
 
-        x = self.decoder_cnn(slots)           # [B, K, H, W, 4]
+        x = self.decoder_cnn(slots)         
         
         recons, masks = x.split([3, 1], dim=-1)
-        masks = masks.softmax(dim=1)          # alpha compositing over slots
+        masks = masks.softmax(dim=1)      
 
         recon_combined = (recons * masks).sum(dim=1).permute(0, 3, 1, 2)
 

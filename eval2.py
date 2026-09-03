@@ -6,6 +6,7 @@ import re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -18,8 +19,8 @@ def adjusted_rand_index(true_mask, pred_mask, eps=1e-8):
     n_points = true_mask.sum(dim=(1, 2))
 
     nij = torch.einsum('bnp,bnt->bpt', pred_mask, true_mask)
-    a = nij.sum(dim=1)   # counts per true group   [B, G_true]
-    b = nij.sum(dim=2)   # counts per pred group   [B, G_pred]
+    a = nij.sum(dim=1) 
+    b = nij.sum(dim=2)   
 
     rindex = (nij * (nij - 1)).sum(dim=(1, 2))
     aindex = (a * (a - 1)).sum(dim=1)
