@@ -51,34 +51,32 @@ def make_scaler(enabled):
 
 
 def main():
-    # args = parse_args()
     seed=0
     set_seed(seed)
 
-    out = 'Out9_2'
+    out = 'Out10'
     npy_dir = DEFAULT_NPY_DIR
     os.makedirs(out, exist_ok=True)
 
 
-    batch_size=32
-    steps=8500
-    log_every=100
-    ckpt_every=1000
+    batch_size=16
+    steps=17000
+    log_every=200
+    ckpt_every=2000
     num_workers=2
     resolution = (64, 64)
     num_slots = 6
-    num_iterations=3
+    num_iterations=1
     hid_dim=64
     
     warmup_steps=2500
     decay_steps=8000
     decay_rate=0.5
     clip_grad = 1
-    base_lr = 1e-4
+    base_lr = 4e-4
     
     resume = None
     no_amp = False
-
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     use_amp = (not no_amp) and device.type == 'cuda'

@@ -164,11 +164,11 @@ def training_curves(run_dirs, out_path):
 
 
 def main():
-    run_dir = 'Out9_2'
+    run_dir = 'Out10'
 
     checkpoint_dir = os.path.join(run_dir, 'models')
 
-    out_dir = 'Out_eval_9_2'
+    out_dir = 'Out_eval_10'
 
     os.makedirs(out_dir, exist_ok=True)
 
@@ -191,7 +191,6 @@ def main():
         num_workers=0
     )
 
-    # Prende tutti i checkpoint senza ordinarli
     checkpoint_paths = glob.glob(
         os.path.join(checkpoint_dir, '*.pt')
     )
@@ -287,9 +286,6 @@ def main():
     print(f'  ARI-FG:  {best_result["ari_fg"]:.6f}')
     print(f'  MSE:     {best_result["mse"]:.6f}')
 
-    # Usa Out6/log.csv.
-    # La funzione training_curves cerca automaticamente:
-    # os.path.join(run_dir, 'log.csv')
     training_curves(
         [('training', run_dir)],
         os.path.join(out_dir, 'curves.png')
